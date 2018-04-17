@@ -73,7 +73,8 @@ def _pkg_config():
         output = _b2str(output)
         if output:
             library_path = output.strip()[2:]
-            library_path = library_path.strip() or None
+       #     library_path = library_path.strip() or None
+            library_path = library_path.strip() or '/usr/lib64/graphviz'
         output = S.check_output(['pkg-config', '--cflags-only-I', 'libcgraph'])
         output = _b2str(output)
         if output:
